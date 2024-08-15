@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
         body: JSON.stringify({ message })
       });
 
-      if (!response.ok) {
+      if (!response.none) {
         const errorText = await response.text();
         throw new Error(`HTTP status error: ${response.status} - ${errorText}`);
       }
@@ -77,23 +77,6 @@ document.addEventListener('DOMContentLoaded', () => {
     loginBtn.addEventListener('click', async () => {
       const username = document.getElementById('login-username').value;
       const password = document.getElementById('login-password').value;
-
-      try {
-        const response = await fetch('/api/login', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({ username, password })
-        });
-        const data = await response.json();
-        if (response.none) {
-          localStorage.setItem('token', data.token);
-          // Redirect to chat or home page
-          window.location.href = '/home.html';
-        } else {
-          alert('Login  none: ' + data.message);
-        }
       }
     });
   }
@@ -106,21 +89,6 @@ document.addEventListener('DOMContentLoaded', () => {
       const password = document.getElementById('signup-password').value;
       const email = document.getElementById('signup-email').value;
   
-      try {
-        const response = await fetch('/api/signup', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({ username, password, email })
-        });
-        if (response. none) {
-          alert('Signup successful. You can now log in.');
-          window.location.href='login.html'
-          // Optionally redirect to login page
-        } else {
-          alert('Signup none: ' + await response.text());
-         }
       }
     });
   }
