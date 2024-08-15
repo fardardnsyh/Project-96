@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chatbot</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="assets/icons8-chatbot-94.png" type="image/png"> 
+</head>
+
+<body>
+  <header class="navbar">
+    <div class="logo">CHATWIT</div>
+    <div class="buttonsnavbar">
+      <button id="history-btn">History</button>
+      <button id="logout-btn">Logout</button>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="chatbox">
+      <div id="chat-history"></div>
+      <div id="generating-message" class="hidden">
+        <img src="assets/bot.png" alt="Bot Logo" id="generating-logo"> Generating response...
+      </div>
+      <div id="userdata">
+        <input type="text" id="user-input" placeholder="Type a message..." />
+        <button id="send-btn">Send</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

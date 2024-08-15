@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat-Wit App</title>
+  <link href="/styles.css" rel="stylesheet">
+</head>
+
+<body class="overflow-hidden bg-gray-900 text-white">
+  <div class="relative w-full h-screen">
+    <!-- Navbar -->
+    <nav
+      class="ml-[28vh] mt-4 bg-gray-900 fixed w-3/4 mx-auto z-30 top-0 start-0 border border-gray-700 rounded-2xl shadow-md">
+      <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <a  class="flex items-center space-x-3 rtl:space-x-reverse">
+          <img src="https://flowbite.com/docs/images/logo.svg" class="h-8" alt="Flowbite Logo">
+          <span class="self-center text-white text-2xl font-semibold whitespace-nowrap">CHAT-WIT</span>
+        </a>
+        <div class="flex md:order-2 mt-4 md:mt-0  space-x-3 md:space-x-0 rtl:space-x-reverse">
+         <a href="signup.html">
+            <button type="button"
+              class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center">Get
+              started</button>
+         </a>
+          <button data-collapse-toggle="navbar-sticky" type="button"
+            class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+            aria-controls="navbar-sticky" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M1 1h15M1 7h15M1 13h15" />
+            </svg>
+          </button>
+        </div>
+        <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+          <ul
+            class="flex flex-col p-4 md:p-0 mt-4 font-medium md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 ">
+            <li><a href="#"
+                class="block py-2 px-3 text-white rounded hover:bg-gray-700 md:hover:bg-transparent md:hover:text-blue-700">Home</a>
+            </li>
+            <li><a href="#"
+                class="block py-2 px-3 text-white rounded hover:bg-gray-700 md:hover:bg-transparent md:hover:text-blue-700">About</a>
+            </li>
+            <li><a href="login.html"
+                class="block py-2 px-3 text-white rounded hover:bg-gray-700 md:hover:bg-transparent md:hover:text-blue-700">Login</a>
+            </li>
+            <li><a href="signup.html"
+                class="block py-2 px-3 text-white rounded hover:bg-gray-700 md:hover:bg-transparent md:hover:text-blue-700">Signup</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Full-Screen Video -->
+    <video class="absolute top-0 left-0 w-full h-full object-cover z-10" src="./assets/7649279-uhd_3840_2160_30fps.mp4"
+      autoplay muted loop></video>
+
+    <!-- Overlay Content -->
+    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 text-center">
+      <p class="font-bold text-6xl md:font-extrabold md:text-6xl sm:text-5xl  md:tracking-wide md:mb-4 md:whitespace-nowrap">WELCOME TO CHAT-WIT</p>
+      <p class="font-bold text-white text-3xl mb-4">An AI Powered app for your queries</p>
+      <a href="login.html">
+        <button type="button" class="h-12 w-[20vh] m-[10px] items-center rounded-full 
+    bg-gradient-to-r from-purple-500 via-red-500 to-yellow-500 p-[1.5px]
+     text-white">
+          <div class="flex h-full w-full items-center font-bold text-xl justify-center rounded-full bg-gray-900">LOGIN</div>
+        </button>
+      </a>
+      <a href="signup.html"><button type="button" class="h-12 w-[20vh] m-[10px] items-center rounded-full 
+        bg-gradient-to-r from-purple-500 via-red-500 to-yellow-500 p-[1.5px]
+         text-white">
+          <div class="flex h-full w-full items-center justify-center font-bold text-xl rounded-full bg-gray-900">REGISTER</div>
+        </button></a>
+    </div>
+  </div>
+</body>
+
+</html>

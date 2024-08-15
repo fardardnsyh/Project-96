@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat History</title>
+  <style>
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .history-container {
+    max-width: 1300px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #373535;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  
+  #chat-history {
+    max-height: 600px;
+    overflow-y: auto;
+    border: 1px solid #757474;
+    padding: 15px;
+    border-radius: 4px;
+    background: #131212;
+  }
+  
+  .message {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 10px;
+  }
+  
+  .message img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .message.user img {
+    border: 2px solid #007bff;
+  }
+  
+  .message.bot img {
+    border: 2px solid #28a745;
+  }
+  
+  .message span {
+    background: #e9ecef;
+    padding: 15px;
+    border-radius: 4px;
+    display: inline-block;
+    max-width: 100%;
+    word-wrap: break-word;
+  }
+  
+  .message.user span {
+    background: #007bff;
+    color: #fff;
+    margin-left: auto;
+  }
+  
+  .message.bot span {
+    background: #444444;
+    color: white;
+  }
+  
+  button {
+    flex: 1 1 auto;
+    margin: 10px;
+    padding: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: rgb(44, 44, 44);
+    font-weight: bold;
+    border-radius: 10px;
+    background-image: linear-gradient(to right, #fbc2eb 0%, #a6c1ee 51%, #fbc2eb 100%);
+   }
+  
+   button:hover {
+    background-position: right center; 
+  }
+  </style>
+</head>
+<body>
+  <div class="history-container">
+    <div id="chat-history"></div>
+    <button onclick="goBack()">Back</button>
+  </div>
+  <script src="history.js"></script>
+</body>
+</html>
