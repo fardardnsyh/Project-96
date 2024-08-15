@@ -103,8 +103,6 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
           alert('Login failed: ' + data.message);
         }
-      } catch (error) {
-        console.error('Error logging in:', error);
       }
     });
   }
@@ -131,9 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
           // Optionally redirect to login page
         } else {
           alert('Signup failed: ' + await response.text());
-        }
-      } catch (error) {
-        console.error('Error signing up:', error);
+         }
       }
     });
   }
