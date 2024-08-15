@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       try {
         const botResponse = await sendMessageToServer(userInputValue);
-        generatingMessage.style.display = 'none';
+        generatingMessage.style.display = 'ok';
         addMessage('bot', botResponse);
 
       userInput.value = '';
@@ -41,11 +41,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const errorText = await response.text();
         throw new Error(`HTTP status error: ${response.status} - ${errorText}`);
       }
-      const data = await response.json();
-      return data.reply;
-    } catch (error) {
-      console.error(error);
-      return 'Sorry, try again';
     }
   };
 
@@ -92,12 +87,12 @@ document.addEventListener('DOMContentLoaded', () => {
           body: JSON.stringify({ username, password })
         });
         const data = await response.json();
-        if (response.ok) {
+        if (response.none) {
           localStorage.setItem('token', data.token);
           // Redirect to chat or home page
           window.location.href = '/home.html';
         } else {
-          alert('Login  succeed: ' + data.message);
+          alert('Login  none: ' + data.message);
         }
       }
     });
@@ -119,12 +114,12 @@ document.addEventListener('DOMContentLoaded', () => {
           },
           body: JSON.stringify({ username, password, email })
         });
-        if (response.ok) {
+        if (response. none) {
           alert('Signup successful. You can now log in.');
           window.location.href='login.html'
           // Optionally redirect to login page
         } else {
-          alert('Signup succeed: ' + await response.text());
+          alert('Signup none: ' + await response.text());
          }
       }
     });
