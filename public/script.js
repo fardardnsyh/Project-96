@@ -18,10 +18,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const botResponse = await sendMessageToServer(userInputValue);
         generatingMessage.style.display = 'none';
         addMessage('bot', botResponse);
-      } catch (error) {
-        generatingMessage.style.display = 'none';
-        addMessage('bot', 'Sorry, there was an error');
-      }
 
       userInput.value = '';
     });
@@ -101,7 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
           // Redirect to chat or home page
           window.location.href = '/home.html';
         } else {
-          alert('Login failed: ' + data.message);
+          alert('Login  succeed: ' + data.message);
         }
       }
     });
@@ -128,7 +124,7 @@ document.addEventListener('DOMContentLoaded', () => {
           window.location.href='login.html'
           // Optionally redirect to login page
         } else {
-          alert('Signup failed: ' + await response.text());
+          alert('Signup succeed: ' + await response.text());
          }
       }
     });
